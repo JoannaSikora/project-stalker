@@ -1,0 +1,39 @@
+@import "colors";
+
+.form {
+
+  &_control {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+    max-width: 23rem;
+    border: 0;
+    appearance: none;
+    box-shadow: 0 0 1.5rem .4rem rgba(0,0,0,0.06);
+  }
+
+  &_label {
+    font-weight: bold;
+  }
+
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 7.5rem;
+
+    &--textarea {
+      min-height: 14.5rem;
+    }
+  }
+
+  &_error {
+    font-size: .8rem;
+    color: $danger;
+  }
+}
+
+textarea {
+  resize: none;
+  height: 10rem;
+}
+

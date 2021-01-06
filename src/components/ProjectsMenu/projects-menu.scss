@@ -1,0 +1,78 @@
+@import "../../styles/colors";
+
+.ProjectsMenu {
+    &_wrapper {
+        min-width: 20rem;
+        max-width: 20rem;
+        min-height: 100vh;
+
+        background: rgb(31,80,71);
+        color: $white;
+        text-align: center;
+        transition: .5s ease-in margin-left;
+    }
+
+    &--hide {
+        margin-left: -20rem;
+    }
+
+    &_title {
+
+        &_wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 1rem;
+
+        }
+    }
+
+    &_list {
+
+        &_wrapper {
+            position: relative;
+        }
+
+        &_projects {
+            &_wrapper {
+                position: relative;
+            }
+        }
+
+        &_activeMarker {
+            transition: transform 0.4s;
+            transform: translateY(0px);
+            background-color: $white;
+            height: 3.5rem;
+            width: 100%;
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+            margin-left: 0.5rem;
+            position: absolute;
+        }
+    }
+
+    &_button {
+        transition: .5s ease-in all;
+        cursor: pointer;
+        z-index: 1;
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: $white;
+
+        &_wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin: 1rem;
+        }
+
+        &--hiddenMenu {
+            fill: $black;
+            margin-right: -30%;
+        }
+    }
+}
+
+
+
+

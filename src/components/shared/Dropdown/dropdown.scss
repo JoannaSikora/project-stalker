@@ -1,0 +1,51 @@
+@import "../../../styles/colors";
+
+.Dropdown {
+  &_wrapper {
+    position: relative;
+  }
+
+  &_icon {
+
+    &_wrapper {
+      cursor: pointer;
+    }
+  }
+
+  &_list {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    padding: 0;
+    display: none;
+
+    width: 10rem;
+    z-index: 100;
+    background-color: $white;
+    border-radius: 0.2em;
+    box-shadow: 0 0 1rem -0.5rem;
+
+    &_option {
+      cursor: pointer;
+      margin: 0 auto;
+      border-bottom: 0.1rem solid #b6bfb6;
+      padding: .75rem;
+
+      &:last-child {
+        border: none;
+      }
+
+      &:hover {
+        color: $white;
+        background-color: $darkGreen;
+      }
+    }
+
+    &--block {
+      display: block;
+    }
+
+  }
+
+}
+

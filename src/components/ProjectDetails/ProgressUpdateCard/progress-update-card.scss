@@ -1,0 +1,64 @@
+@import "../../../styles/colors";
+
+.ProgressUpdateCard {
+
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 35rem;
+
+    margin-bottom: 1rem;
+    padding: 3rem;
+    position: relative;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 1rem -0.5rem;
+    border-top-width: 0.5rem;
+    border-top-style: solid;
+  }
+
+  &_dropdown {
+    &_wrapper {
+      position: absolute;
+      right: 0;
+      top: 1rem;
+    }
+  }
+
+  &_property {
+
+    &--description {
+      white-space: pre-wrap;
+      line-height: 1.7rem;
+    }
+
+    &_label {
+      font-weight: bold;
+
+      &--extraPadding {
+        padding-bottom: 0.3rem;
+      }
+    }
+
+    &--extraPadding {
+      padding-top: 0.8rem;
+    }
+  }
+
+
+  &--onTrack {
+    border-top-color: $onTrack;
+  }
+
+  &--atRisk {
+    border-top-color: $atRisk;
+  }
+
+  &--offTrack {
+    border-top-color: $offTrack;
+  }
+
+  &--onHold {
+    border-top-color: $onHold;
+  }
+}
+

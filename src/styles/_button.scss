@@ -1,0 +1,32 @@
+@import "../styles/colors";
+
+.button {
+  padding: .8rem 1rem;
+  background-color: $yellowAccent;
+  border-radius: 0.4rem;
+  border: none;
+  box-shadow: .7rem .7rem 1.5rem 0 rgba(50, 50, 50, 0.15);
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover {
+     filter: brightness(80%);
+  }
+
+  @media (max-width: 60em) {
+    padding: .6rem .8rem;
+  }
+
+  &--cancel {
+    background-color: $danger;
+    color: $white;
+  }
+
+  &_wrapper {
+    display: flex;
+
+    >:first-child {
+      margin-right: 1rem;
+    }
+  }
+}

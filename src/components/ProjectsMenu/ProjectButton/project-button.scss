@@ -1,0 +1,19 @@
+@import "../../../styles/colors";
+
+.ProjectButton {
+  &_wrapper {
+    cursor: pointer;
+    transition: .2s ease-in all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+
+  }
+
+  &--active {
+    color: $black;
+    font-weight: bold;
+  }
+}
+

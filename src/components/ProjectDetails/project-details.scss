@@ -1,0 +1,85 @@
+@import "../../styles/colors";
+
+.ProjectDetails {
+
+  &--noResults {
+    display: flex;
+    margin: auto;
+  }
+
+  &_wrapper {
+    width: 100%;
+    padding: 1rem 3rem;
+  }
+
+  &_title {
+    margin-right: 1rem;
+
+    &_wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &_status {
+      font-weight: bold;
+
+      &--onTrack {
+        color: $onTrack;
+      }
+
+      &--atRisk {
+        color: $atRisk;
+      }
+
+      &--offTrack {
+        color: $offTrack;
+      }
+
+      &--onHold {
+        color: $onHold;
+      }
+    }
+
+    &_dropdown {
+      margin-top: -1rem;
+    }
+
+  }
+
+  &_cards {
+
+    &--noResults {
+      display: flex;
+      justify-content: center;
+    }
+
+    &--latest {
+      &_title {
+        &_wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+
+    &--history {
+      &_title {
+        align-self: start;
+      }
+    }
+
+
+    &_wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: 35rem;
+    }
+  }
+
+}
+
+
