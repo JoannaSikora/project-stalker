@@ -3,7 +3,7 @@ import {
     DELETE_PROGRESS_UPDATE,
     DELETE_PROJECT_DELETE_PROGRESS_UPDATES,
     UPDATE_PROGRESS_UPDATE
-} from "./constants";
+} from './constants';
 
 export const deleteProgressUpdate = id => {
     return {

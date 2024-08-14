@@ -1,8 +1,8 @@
 import React from 'react';
-import { useDispatch } from "react-redux";
-import { updateProgressUpdate } from "../../../../state/actions/progressUpdatesActions";
-import ProgressUpdateForm from "../../../shared/ProgressUpdateForm/ProgressUpdateForm";
-import moment from "moment";
+import { useDispatch } from 'react-redux';
+import { updateProgressUpdate } from '../../../../state/actions/progressUpdatesActions';
+import ProgressUpdateForm from '../../../shared/ProgressUpdateForm/ProgressUpdateForm';
+import moment from 'moment';
 
 const UpdateProgressUpdate = ({ progressUpdate, close }) => {
     const dispatch = useDispatch();

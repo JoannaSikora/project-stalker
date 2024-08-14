@@ -2,13 +2,13 @@ import {
     PATCH_PROJECTS_NAME,
     DELETE_PROJECT,
     PROJECT_SELECTED,
-    CREATE_PROJECT,
-} from "./constants";
+    CREATE_PROJECT
+} from './constants';
 
 export const selectProject = id => {
     return {
         type: PROJECT_SELECTED,
-        payload: { id },
+        payload: { id }
     }
 };
 

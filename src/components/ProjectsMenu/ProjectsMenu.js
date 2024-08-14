@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import ProjectButton from "./ProjectButton/ProjectButton";
-import AddNewProject from "./AddNewProject/AddNewProject";
-import Modal from "../shared/Modal/Modal";
-import useModal from "../../customHooks/useModal";
+import ProjectButton from './ProjectButton/ProjectButton';
+import AddNewProject from './AddNewProject/AddNewProject';
+import Modal from '../shared/Modal/Modal';
+import useModal from '../../customHooks/useModal';
 import './projects-menu.scss';
-import { ReactComponent as MenuIcon } from "../../assets/icons/menu.svg";
-import { useDispatch, useSelector } from "react-redux";
-import { selectProject } from "../../state/actions/projectsActions";
+import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectProject } from '../../state/actions/projectsActions';
 
 const ProjectsMenu = () => {
     const projects = useSelector(state => state.projects);
@@ -14,7 +14,7 @@ const ProjectsMenu = () => {
     const selectedProject = projects.find(project => project.id === selectedProjectId);
 
     const { open, openModal, closeModal } = useModal();
-    const [ isShowing, toggleIsShowing ] = useState(true);
+    const [isShowing, toggleIsShowing] = useState(true);
 
     const markerRef = useRef(null);
     const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const ProjectsMenu = () => {
             markerRef.current.style.display = 'block';
         }
 
-    }, [ projects,  selectedProject ]);
+    }, [projects, selectedProject]);
 
     const onProjectSelect = (project, ref) => {
         moveSelectedProjectMarker(project, ref);
@@ -66,11 +66,11 @@ const ProjectsMenu = () => {
     };
 
     const hideMenu = () => {
-        return isShowing ? null : "ProjectsMenu--hide";
+        return isShowing ? null : 'ProjectsMenu--hide';
     };
 
     const hideMenuMoveButton = () => {
-        return isShowing ? null : "ProjectsMenu_button--hiddenMenu";
+        return isShowing ? null : 'ProjectsMenu_button--hiddenMenu';
     };
 
     const toggleMenu = () => {

@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const useCustomForm = ({ initialValues, validate, onSubmit }) => {
-    const [ values, setValues ] = useState(initialValues);
-    const [ errors, setErrors ] = useState({});
-    const [ touched, setTouched ] = useState({});
-    const [ canSubmit, setCanSubmit ] = useState(true);
+    const [values, setValues] = useState(initialValues);
+    const [errors, setErrors] = useState({});
+    const [touched, setTouched] = useState({});
+    const [canSubmit, setCanSubmit] = useState(true);
 
     useEffect(() => {
         const errors = validate(values);
         setErrors(errors);
-        setCanSubmit(Object.keys(errors).length === 0 );
-    }, [ values ]);
+        setCanSubmit(Object.keys(errors).length === 0);
+    }, [values]);
 
     const handleChange = (event) => {
         const { target } = event;

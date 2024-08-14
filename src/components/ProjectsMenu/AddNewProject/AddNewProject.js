@@ -1,15 +1,15 @@
 import React from 'react';
-import { useDispatch, useSelector } from "react-redux";
-import { createProject, selectProject } from "../../../state/actions/projectsActions";
-import ProjectForm from "../../shared/ProjectForm/ProjectForm";
-import { getNextId } from "../../../helpers/helperMethods";
+import { useDispatch, useSelector } from 'react-redux';
+import { createProject, selectProject } from '../../../state/actions/projectsActions';
+import ProjectForm from '../../shared/ProjectForm/ProjectForm';
+import { getNextId } from '../../../helpers/helperMethods';
 
 const AddNewProject = ({ close }) => {
     const projects = useSelector(state => state.projects);
     const dispatch = useDispatch();
 
     const onSubmit = ({ values }) => {
-        const nextId =  getNextId(projects);
+        const nextId = getNextId(projects);
         dispatch(createProject({ name: values.name, id: nextId }));
 
         if (projects.length === 0) {
@@ -19,7 +19,7 @@ const AddNewProject = ({ close }) => {
         close();
     };
 
-    const initialValues = { name: "" };
+    const initialValues = { name: '' };
 
     return (
         <div>

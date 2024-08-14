@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { ReactComponent as MoreIcon } from "../../../assets/icons/more.svg";
+import { ReactComponent as MoreIcon } from '../../../assets/icons/more.svg';
 import './dropdown.scss';
 
 const Dropdown = ({ options, onSelectedChange, width }) => {
-    const [ open, setOpen ] = useState(false);
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         const bodyClickListener = () => {
@@ -17,7 +17,7 @@ const Dropdown = ({ options, onSelectedChange, width }) => {
         return () => {
             document.body.removeEventListener('click', bodyClickListener)
         }
-    }, [ open ]);
+    }, [open]);
 
     const onOptionSelect = (option) => {
         onSelectedChange(option);
@@ -37,7 +37,7 @@ const Dropdown = ({ options, onSelectedChange, width }) => {
         )
     });
 
-    const isDropdownOpen  = open ? "Dropdown_list--block" : null;
+    const isDropdownOpen = open ? 'Dropdown_list--block' : null;
 
     return (
         <div className="Dropdown_wrapper">
@@ -46,8 +46,10 @@ const Dropdown = ({ options, onSelectedChange, width }) => {
                 aria-haspopup="listbox"
                 role="button"
                 className="Dropdown_icon_wrapper"
-                onClick={() => {setOpen(!open)}}>
-                <MoreIcon style={{width}}/>
+                onClick={() => {
+                    setOpen(!open)
+                }}>
+                <MoreIcon style={{ width }} />
             </div>
 
             <ul

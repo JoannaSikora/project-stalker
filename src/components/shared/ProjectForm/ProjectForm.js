@@ -1,10 +1,10 @@
-import React from "react";
-import useCustomForm from "../../../customHooks/useCustomForm";
+import React from 'react';
+import useCustomForm from '../../../customHooks/useCustomForm';
 
 const ProjectForm = ({ initialValues, onSubmit }) => {
     const nameMaxLength = 30;
 
-    const validate = (values) =>  {
+    const validate = (values) => {
         let errors = {};
         if (!values.name) {
             errors.name = 'required';
@@ -40,11 +40,11 @@ const ProjectForm = ({ initialValues, onSubmit }) => {
                     maxLength={nameMaxLength}
                     aria-invalid={errors.name}
                     name="name"
-                    autoComplete="off"/>
+                    autoComplete="off" />
                 {touched.name && errors.name && errors.name === 'required'
-                && <div className="form_error">Name is required</div>}
+                    && <div className="form_error">Name is required</div>}
                 {touched.name && errors.name && errors.name === 'maxLength'
-                && <div className="form_error">Name cannot exceed {nameMaxLength} characters</div>}
+                    && <div className="form_error">Name cannot exceed {nameMaxLength} characters</div>}
             </div>
             <button
                 disabled={!canSubmit}
@@ -52,7 +52,7 @@ const ProjectForm = ({ initialValues, onSubmit }) => {
                 className="button">
                 Create
             </button>
-    </form>
+        </form>
     )
 };
 

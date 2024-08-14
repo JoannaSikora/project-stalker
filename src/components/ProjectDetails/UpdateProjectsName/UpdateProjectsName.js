@@ -1,7 +1,7 @@
 import React from 'react';
-import { useDispatch } from "react-redux";
-import { patchProjectsName } from "../../../state/actions/projectsActions";
-import ProjectForm from "../../shared/ProjectForm/ProjectForm";
+import { useDispatch } from 'react-redux';
+import { patchProjectsName } from '../../../state/actions/projectsActions';
+import ProjectForm from '../../shared/ProjectForm/ProjectForm';
 
 const UpdateProjectsName = ({ project, close }) => {
     const dispatch = useDispatch();

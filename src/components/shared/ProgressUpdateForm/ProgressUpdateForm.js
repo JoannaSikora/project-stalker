@@ -1,11 +1,11 @@
-import React from "react";
-import useCustomForm from "../../../customHooks/useCustomForm";
-import { AT_RISK, OFF_TRACK, ON_HOLD, ON_TRACK } from "../../../helpers/constants/statusConstants";
+import React from 'react';
+import useCustomForm from '../../../customHooks/useCustomForm';
+import { AT_RISK, OFF_TRACK, ON_HOLD, ON_TRACK } from '../../../helpers/constants/statusConstants';
 
 const ProgressUpdateForm = ({ initialValues, onSubmit }) => {
     const descriptionMaxLength = 500;
 
-    const validate = (values) =>  {
+    const validate = (values) => {
         let errors = {};
         if (!values.status) {
             errors.status = 'required';
@@ -48,7 +48,7 @@ const ProgressUpdateForm = ({ initialValues, onSubmit }) => {
                     <option value={AT_RISK}>At Risk</option>
                 </select>
                 {touched.status && errors.status && errors.status === 'required'
-                && <div className="form_error">Status is required</div>}
+                    && <div className="form_error">Status is required</div>}
             </div>
             <div className="form_wrapper form_wrapper--textarea">
                 <label htmlFor="description" className="form_label">Description</label>
@@ -62,11 +62,11 @@ const ProgressUpdateForm = ({ initialValues, onSubmit }) => {
                     maxLength={descriptionMaxLength}
                     aria-invalid={errors.description}
                     name="description"
-                    autoComplete="off"/>
+                    autoComplete="off" />
                 {touched.description && errors.description && errors.description === 'required'
-                && <div className="form_error">Description is required</div>}
+                    && <div className="form_error">Description is required</div>}
                 {touched.description && errors.description && errors.description === 'maxLength'
-                && <div className="form_error">Description cannot exceed {descriptionMaxLength} characters</div>}
+                    && <div className="form_error">Description cannot exceed {descriptionMaxLength} characters</div>}
             </div>
             <button
                 disabled={!canSubmit}

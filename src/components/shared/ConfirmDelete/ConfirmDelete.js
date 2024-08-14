@@ -5,7 +5,7 @@ const ConfirmDelete = ({ handleConfirm, name, close }) => {
     return (
         <div>
             <h2>Action Confirmation</h2>
-            <p>Are you sure you want to delete <strong>{ name }</strong>?</p>
+            <p>Are you sure you want to delete <strong>{name}</strong>?</p>
             <div className="button_wrapper">
                 <button
                     onClick={handleConfirm}
